@@ -1,0 +1,90 @@
+# URL Shop Link (GOTTA LET EM KNOW WHERE THEY CAN BUY THE PERMS FROM)
+shop-url: 'https://www.ausmine.net/shop'
+
+# If emojis should be displayed on signs (shortcuts and full names supported).
+emojis-on-signs: true
+
+# If commands should have emojis (shortcuts and full names supported).
+emojis-in-commands: true
+
+# If 'only-command-list' is true, the commands here will be the only commands where emojis are allowed.
+command-list:
+  - '/msg'
+  - '/tell'
+  - '/mail'
+
+# Shortcuts, these will replace the following the respective emoji, i do expect this to grow heaps.
+shortcuts:
+  slightly_smiling_face:
+    - ':)'
+    - '(:'
+  winking_face:
+    - ';)'
+    - '(;'
+  face_with_tongue:
+    - ':P'
+  winking_face_with_tongue:
+    - ';P'
+    - ';p'
+  smiling_face_with_sunglasses:
+    - '8)'
+    - 'B)'
+  neutral_face:
+    - ':|'
+    - '|:'
+  confused:
+    - ':\'
+    - ':/'
+  crying_face:
+    - ';('
+    - ');'
+    - ":'("
+  frowning_face:
+    - ':('
+    - '):'
+  peace_symbol:
+    - ':peace:'
+    - ':peace_hand:'
+  crazy_face:
+    - ':crazy:'
+  face_with_raised_eyebrow:
+    - ':hmm:'
+  shushing_face:
+    - ':shh:'
+  1st_place_medal:
+    - ':first:'
+    - ':1st:'
+  2nd_place_medal:
+    - ':second:'
+    - ':2nd:'
+  3rd_place_medal:
+    - ':third:'
+    - ':3rd:'
+  microphone:
+    - ':mic:'
+  musical_keyboard:
+    - ':piano:'
+  video_game:
+    - ':controller:'
+  dart:
+    - ':target:'
+  game_die:
+    - ':dice:'
+    - ':die:'
+  purple_heart:
+    - '<3'
+  broken_heart:
+    - '</3'
+  keycap_ten:
+    - ':ten:'
+    - ':10:'
+  asterisk:
+    - ':*:'
+  drooling_face:
+    - ':x'
+  grinning_face:
+    - ':D'
+  rolling_on_the_floor_laughing:
+    - ":'D"
+  sad:
+    - ':<'
