@@ -141,7 +141,7 @@ public class EmojiHandler {
 	 */
 	public String toEmoji(Player player,String message) {
 		for (Unicode key : getEmojis(player)) {
-			message = message.replace(":"+key.getName()+":", key.getUnicodeCharacter());
+			message = message.replace(":"+key.getName()+":", ChatColor.RESET + key.getUnicodeCharacter());
 		}
 		return message;
 	}
