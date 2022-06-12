@@ -61,9 +61,6 @@ public class EmojiHandler {
 	 * @return
 	 */
 	public List<Unicode> getEmojis(Player player) {
-		if(player.hasPermission("emojichat.bypass")){
-			return UnicodeApi.getPlugin().instanceManager.getGlobalUnicode();
-		}
 		return UnicodeApi.getPlugin().instanceManager.getGlobalUnicodeFiltered();
 	}
 	
