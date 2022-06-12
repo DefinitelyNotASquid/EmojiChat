@@ -1,9 +1,9 @@
 name: EmojiChat
-version: 2.0.0
+version: 2.0.2
 description: Spice up your minecraft with emojis
 author: Mithrillia
 main: com.mith.EmojiChat.EmojiChat
-api-version: 1.18
+api-version: 1.19
 depend: [UnicodeApi]
 
 commands:

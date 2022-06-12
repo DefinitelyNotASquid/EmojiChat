@@ -40,7 +40,7 @@ class EmojiChatListener implements Listener {
 				return;
 			}
 		}
-
+		System.out.println(event.getFormat());
 		String message = event.getMessage();
 		
 		// Checks if the user disabled shortcuts via /emojichat toggle

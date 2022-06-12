@@ -20,11 +20,9 @@ import org.bukkit.inventory.meta.ItemMeta;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.util.List;
-import java.util.UUID;
+import java.util.*;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 
 public class EmojiHandler {
@@ -141,7 +139,23 @@ public class EmojiHandler {
 	 */
 	public String toEmoji(Player player,String message) {
 		for (Unicode key : getEmojis(player)) {
-			message = message.replace(":"+key.getName()+":", ChatColor.RESET + key.getUnicodeCharacter());
+			if(!message.contains(":"+key.getName()+":")){
+				continue;
+			}
+
+			//Split this, this because we need to do formatting magic on each string
+			List<String> stringList = Arrays.asList(message.split(":"+key.getName()+":"));
+			StringBuilder messageReconstructed = new StringBuilder();
+			for (String s : stringList){
+				if(stringList.indexOf(s) == (stringList.size()-1)){
+					messageReconstructed.append(s);
+					continue;
+				}
+				String chatColours = ChatColor.getLastColors(s);
+				messageReconstructed.append(s).append(ChatColor.WHITE).append(key.getUnicodeCharacter()).append(chatColours);
+			}
+
+			message = messageReconstructed.toString();
 		}
 		return message;
 	}

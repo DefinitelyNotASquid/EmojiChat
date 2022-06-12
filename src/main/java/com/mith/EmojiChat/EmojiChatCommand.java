@@ -28,7 +28,7 @@ class EmojiChatCommand implements CommandExecutor {
 	public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
 
 		if (args.length < 1) {
-			sender.sendMessage(ChatColor.AQUA + "EmojiChat v2.0.0 by Mithrillia");
+			sender.sendMessage(ChatColor.AQUA + "EmojiChat v2.0.2 by Mithrillia");
 			sender.sendMessage(ChatColor.AQUA + "Use " + ChatColor.GREEN + "/emojichat help" + ChatColor.AQUA + " for help.");
 			return true;
 		}

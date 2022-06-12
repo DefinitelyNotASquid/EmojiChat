@@ -1,7 +1,7 @@
-com\mith\EmojiChat\EmojiChatListener.class
-com\mith\EmojiChat\EmojiChatCommand.class
 com\mith\EmojiChat\tasks\AnvilTask.class
-com\mith\EmojiChat\EmojiChatGui.class
+com\mith\EmojiChat\EmojiChatListener.class
 com\mith\EmojiChat\EmojiChatTabComplete.class
+com\mith\EmojiChat\EmojiChatCommand.class
+com\mith\EmojiChat\EmojiChatGui.class
 com\mith\EmojiChat\utils\EmojiHandler.class
 com\mith\EmojiChat\EmojiChat.class
