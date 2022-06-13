@@ -61,6 +61,9 @@ public class EmojiHandler {
 	 * @return
 	 */
 	public List<Unicode> getEmojis(Player player) {
+		if(player.hasPermission("emojichat.bypass")){
+			return UnicodeApi.getPlugin().instanceManager.getGlobalUnicode();
+		}
 		return UnicodeApi.getPlugin().instanceManager.getGlobalUnicodeFiltered();
 	}
 	
@@ -139,20 +142,8 @@ public class EmojiHandler {
 			if(!message.contains(":"+key.getName()+":")){
 				continue;
 			}
-
-			//Split this, this because we need to do formatting magic on each string
-			List<String> stringList = Arrays.asList(message.split(":"+key.getName()+":"));
-			StringBuilder messageReconstructed = new StringBuilder();
-			for (String s : stringList){
-				if(stringList.indexOf(s) == (stringList.size()-1)){
-					messageReconstructed.append(s);
-					continue;
-				}
-				String chatColours = ChatColor.getLastColors(s);
-				messageReconstructed.append(s).append(ChatColor.WHITE).append(key.getUnicodeCharacter()).append(chatColours);
-			}
-
-			message = messageReconstructed.toString();
+			//known issue that the chat colour isn't working anymore, will need to discuss around this.
+			message = message.replace(":"+key.getName()+":", key.getUnicodeCharacter());
 		}
 		return message;
 	}

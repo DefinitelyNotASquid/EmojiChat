@@ -40,9 +40,8 @@ class EmojiChatListener implements Listener {
 				return;
 			}
 		}
-		System.out.println(event.getFormat());
 		String message = event.getMessage();
-		
+
 		// Checks if the user disabled shortcuts via /emojichat toggle
 		if (plugin.getEmojiHandler().hasShortcutsOn(event.getPlayer())) {
 			message = plugin.getEmojiHandler().translateShorthand(message);
@@ -56,7 +55,7 @@ class EmojiChatListener implements Listener {
 
 		// Replace shortcuts with emojis
 		message = plugin.getEmojiHandler().toEmoji(event.getPlayer(), message);
-		
+
 		// If the message contains a disabled character
 		if (!event.getPlayer().hasPermission("emojichat.bypass") && plugin.getEmojiHandler().containsDisabledCharacter(message)) {
 			event.setCancelled(true);
