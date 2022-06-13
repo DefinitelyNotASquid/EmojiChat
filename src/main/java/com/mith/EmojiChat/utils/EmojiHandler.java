@@ -143,7 +143,7 @@ public class EmojiHandler {
 				continue;
 			}
 			//known issue that the chat colour isn't working anymore, will need to discuss around this.
-			message = message.replace(":"+key.getName()+":", key.getUnicodeCharacter());
+			message = message.replace(":"+key.getName()+":", ChatColor.RESET + key.getUnicodeCharacter());
 		}
 		return message;
 	}
